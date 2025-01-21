@@ -1,13 +1,14 @@
 class ArticlesController < ApplicationController
     before_action :set_article, only: [:show, :edit, :update]
-  
+
     def index
+      raise StandardError
       @articles = Article.all
     end
-  
+
     def show
     end
-  
+
     def new
       @article = Article.new
     end
@@ -20,11 +21,11 @@ class ArticlesController < ApplicationController
         render :new
       end
     end
-  
+
     def edit
         @article = Article.find(params[:id])
     end
-  
+
     def update
       if @article.update(article_params)
         redirect_to article_path(@article), notice: '更新できました'
@@ -43,9 +44,8 @@ class ArticlesController < ApplicationController
     def article_params
       params.require(:article).permit(:title, :content)
     end
-  
+
     def set_article
       @article = Article.find(params[:id])
     end
   end
-  
