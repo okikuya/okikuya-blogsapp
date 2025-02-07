@@ -120,7 +120,7 @@ GEM
     erubis (2.7.0)
     faker (3.4.2)
       i18n (>= 1.8.11, < 2)
-    ffi (1.17.0)
+    ffi (1.16.3)
     globalid (1.1.0)
       activesupport (>= 5.0)
     haml (6.3.0)
@@ -257,6 +257,7 @@ GEM
     ruby_parser (3.21.1)
       racc (~> 1.5)
       sexp_processor (~> 4.16)
+    rubygems-update (3.4.22)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -336,6 +337,7 @@ DEPENDENCIES
   dotenv-rails
   erb2haml
   faker
+  ffi (< 1.17)
   hamlit
   jbuilder (~> 2.7)
   listen (~> 3.2)
@@ -344,6 +346,7 @@ DEPENDENCIES
   puma (~> 4.1)
   rails (~> 6.0.6, >= 6.0.6.1)
   rubocop-rails
+  rubygems-update
   sass-rails (>= 6)
   selenium-webdriver
   spring
